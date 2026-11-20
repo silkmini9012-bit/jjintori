@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -29,22 +30,45 @@
 </header>
 
 <main id="main">
-  <section class="hero container" id="top">
-    <div class="hero__pics">
-      <figure class="hero__fig">
-        <div class="slot" data-slot="hero" data-alt="대표 메뉴 한상을 위에서 찍은 사진">
-          <img src="images/wanmi-jokbal-hansang.jpg" width="900" height="900" alt="둥근 쟁반에 족발과 반찬 열여덟 가지가 차려진 한상" style="object-position: 50% 45%" fetchpriority="high">
-        </div>
-        <figcaption>완미족발 별내점, 18첩 한상.</figcaption>
-      </figure>
-      <figure class="hero__fig">
-        <div class="slot" data-slot="hero-2" data-alt="불판 위에서 고기가 구워지는 사진">
-          <img src="images/tongtong-moksal.jpg" width="900" height="900" alt="불판 위에서 노릇하게 구워지는 숙성 목살과 대파" style="object-position: 50% 40%" fetchpriority="high">
-        </div>
-        <figcaption>통통 다산본점, 구워 주는 숙성 목살.</figcaption>
-      </figure>
+  <section class="hero" id="top">
+    <div class="reel" data-loop role="region" aria-label="찐토리가 다녀온 곳 사진">
+      <ul class="reel__track">
+        <li class="reel__set"><ul class="reel__list">
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224461861436"><span class="reel__pic"><img src="images/strip/wanmi-jokbal.jpg" alt="" width="900" height="900" decoding="async" fetchpriority="high"></span><span class="reel__cap">완미족발, 18첩 한상</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224466101604"><span class="reel__pic"><img src="images/strip/yangsando-jangeo.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">양산도, 장어 덮밥</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224436018302"><span class="reel__pic"><img src="images/strip/sukssung-hoe.jpg" alt="" width="900" height="1200" decoding="async"></span><span class="reel__cap">숙썽수산, 숙성회</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224474798518"><span class="reel__pic"><img src="images/strip/tongtong-moksal.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">통통 다산본점, 숙성 목살</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224460545963"><span class="reel__pic"><img src="images/strip/dragoncity-daege.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">드래곤시티 뷔페, 대게</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224476017188"><span class="reel__pic"><img src="images/strip/hobonggol-ujokjjim.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">호봉골수육식당, 매운 우족갈비찜</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224446796089"><span class="reel__pic"><img src="images/strip/pavrandt-course.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">파브란트, 시그니처 코스</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224455584747"><span class="reel__pic"><img src="images/strip/jjipbbul-jikhwa.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">짚뿔왕칠백도씨, 700도 직화구이</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224483961629"><span class="reel__pic"><img src="images/strip/onhouse-sando.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">온하우스, 후르츠산도</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224470629202"><span class="reel__pic"><img src="images/strip/gomajum-kalguksu.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">곰아줌칼국수, 해물칼국수</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224481092685"><span class="reel__pic"><img src="images/strip/hwado-beef.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">화도 별내, 소고기 비프 콤보</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224436797213"><span class="reel__pic"><img src="images/strip/ttoksuni-agujjim.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">똑순이아구찜, 아구찜</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224449054426"><span class="reel__pic"><img src="images/strip/goldenthai.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">골든타이, 태국 요리</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224433662220"><span class="reel__pic"><img src="images/strip/honggyojip-ogyeopsal.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">홍교집, 명품 오겹살</span></a></li>
+        </ul></li>
+        <li class="reel__set" aria-hidden="true"><ul class="reel__list">
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224461861436" tabindex="-1"><span class="reel__pic"><img src="images/strip/wanmi-jokbal.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">완미족발, 18첩 한상</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224466101604" tabindex="-1"><span class="reel__pic"><img src="images/strip/yangsando-jangeo.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">양산도, 장어 덮밥</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224436018302" tabindex="-1"><span class="reel__pic"><img src="images/strip/sukssung-hoe.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">숙썽수산, 숙성회</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224474798518" tabindex="-1"><span class="reel__pic"><img src="images/strip/tongtong-moksal.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">통통 다산본점, 숙성 목살</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224460545963" tabindex="-1"><span class="reel__pic"><img src="images/strip/dragoncity-daege.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">드래곤시티 뷔페, 대게</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224476017188" tabindex="-1"><span class="reel__pic"><img src="images/strip/hobonggol-ujokjjim.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">호봉골수육식당, 매운 우족갈비찜</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224446796089" tabindex="-1"><span class="reel__pic"><img src="images/strip/pavrandt-course.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">파브란트, 시그니처 코스</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224455584747" tabindex="-1"><span class="reel__pic"><img src="images/strip/jjipbbul-jikhwa.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">짚뿔왕칠백도씨, 700도 직화구이</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224483961629" tabindex="-1"><span class="reel__pic"><img src="images/strip/onhouse-sando.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">온하우스, 후르츠산도</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224470629202" tabindex="-1"><span class="reel__pic"><img src="images/strip/gomajum-kalguksu.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">곰아줌칼국수, 해물칼국수</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224481092685" tabindex="-1"><span class="reel__pic"><img src="images/strip/hwado-beef.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">화도 별내, 소고기 비프 콤보</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224436797213" tabindex="-1"><span class="reel__pic"><img src="images/strip/ttoksuni-agujjim.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">똑순이아구찜, 아구찜</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224449054426" tabindex="-1"><span class="reel__pic"><img src="images/strip/goldenthai.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">골든타이, 태국 요리</span></a></li>
+          <li class="reel__item"><a class="reel__link" href="https://blog.naver.com/silksun9012/224433662220" tabindex="-1"><span class="reel__pic"><img src="images/strip/honggyojip-ogyeopsal.jpg" alt="" width="900" height="900" decoding="async"></span><span class="reel__cap">홍교집, 명품 오겹살</span></a></li>
+        </ul></li>
+      </ul>
+      <button class="btn btn--ruled btn--small reel__toggle" type="button" data-loop-toggle aria-label="사진 움직임 멈추기">멈춤</button>
     </div>
-    <div class="hero__text grid12">
+    <div class="hero__text grid12 container">
       <h1 class="hero__head">사장님 가게, 찐으로 다녀옵니다.</h1>
       <div class="hero__side">
         <p class="lead">이웃 <span data-live="blog.subscribers">8,732</span>명이 읽는 네이버 맛집 블로그, 찐토리입니다.</p>
@@ -60,33 +84,33 @@
     <div class="container">
       <div class="head-split grid12">
         <h2>최근에 다녀온 곳</h2>
-        <p class="lead">새 글을 올리면 이 목록도 같이 바뀝니다. <small class="stamp"><span data-live="updatedAt">11월 20일 AM 11:54</span> 기준</small></p>
+        <p class="stamp-line"><small class="stamp"><span data-live="updatedAt">11월 20일 오후 12:04</span> 기준</small></p>
       </div>
       <ol class="posts" data-posts>
         <!-- posts:start -->
         <li class="post post--lead">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224483961629"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTlfMTI1/MDAxNzk1MDcxMzYwNTE1.lsCYsjnJ7hsrK57EUYX_EVVvH-UAhLkwCjXg4Eh9FKwg.H5YuCu_CEhu5yYQAJbbGZ0bsXd2_zNxdvpgDVSoX-OIg.JPEG/900_20261111_143124.jpg?type=w800" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">[남양주]별내 카페거리 추천, 온하우스, 후르츠산도와 흑임자슈페너 맛집</span></a>
-          <p class="post__meta"><time datetime="2026-11-19T13:21:54.180Z">11월 19일</time><span>공감 358</span><span>댓글 24</span></p>
+          <p class="post__meta"><time datetime="2026-11-19T13:21:54.180Z">11월 19일</time><span>댓글 25</span></p>
         </li>
         <li class="post">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224482941999"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMThfMzAw/MDAxNzk0OTkyODY2OTM3.95GK99k4sPIK9PYowNPc8UBcuqx1ZsM5kSWEngVQMI8g.emS_iiIXhcfj9SkXX9MO9R9xAFhzkAFjayafCxwA0IQg.JPEG/900_20261112_142456.jpg?type=w400" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">여주아울렛 맛집 고기집,  남여주배추된장국 숙성고깃집, 솔모로CC, 금강CC 맛집 한우등심</span></a>
-          <p class="post__meta"><time datetime="2026-11-18T23:02:43.669Z">11월 19일</time><span>공감 564</span><span>댓글 48</span></p>
+          <p class="post__meta"><time datetime="2026-11-18T23:02:43.669Z">11월 19일</time><span>댓글 48</span></p>
         </li>
         <li class="post">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224481092685"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTdfNzYg/MDAxNzk0OTE3Mzg5NjA3.6cTtRbpaP2GTFpK6NJ5cSiaIAOPcJaexM9ybhMT0E9gg.COFXq43ivBX9mxyne2tNnXl2Bz6A9sRtJUhl8JbXeswg.JPEG/900_20261111_131020.jpg?type=w400" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">별내 고기집, 화도, 별내 소고기 비프 콤보 후기, 단체회식 장소 추천</span></a>
-          <p class="post__meta"><time datetime="2026-11-17T12:47:50.616Z">11월 17일</time><span>공감 1,242</span><span>댓글 44</span></p>
+          <p class="post__meta"><time datetime="2026-11-17T12:47:50.616Z">11월 17일</time><span>댓글 44</span></p>
         </li>
         <li class="post">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224478352755"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTVfMTgw/MDAxNzk0NzUyMjA1MjA0.52yaA4Tf5rI1_hTzKn1f5elIw90-hYOYmu3CevjzPiQg.KbswrrjgD55XzZFCUc4CBrnvnmXePqieoUwy29gtxNAg.JPEG/900_20261112_185708.jpg?type=w400" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">[남양주] 별내 고깃집 녹지 별내점, 남양주 소고기 양고기 연말 모임 맛집 (프라이빗 룸)</span></a>
-          <p class="post__meta"><time datetime="2026-11-15T14:17:46.906Z">11월 15일</time><span>공감 1,187</span><span>댓글 40</span></p>
+          <p class="post__meta"><time datetime="2026-11-15T14:17:46.906Z">11월 15일</time><span>댓글 40</span></p>
         </li>
         <li class="post">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224476017188"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTNfNjIg/MDAxNzk0NTMxNDY0OTA5.gFxzOAKw8gJQYzJSm-2DL28vgo3I8o6EkF_ptKCPIgYg.33JcS1JzsH7hRparsZuPqWkaAPH2YjzpvyMy2Vf4DfQg.JPEG/900_20261102_181539.jpg?type=w400" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">서울 우족찜 강동구청 맛집, 호봉골수육식당 강동구청점, 땀 쫙 빼는 매운 우족갈비찜</span></a>
-          <p class="post__meta"><time datetime="2026-11-13T10:00:45.693Z">11월 13일</time><span>공감 1,058</span><span>댓글 35</span></p>
+          <p class="post__meta"><time datetime="2026-11-13T10:00:45.693Z">11월 13일</time><span>댓글 35</span></p>
         </li>
         <li class="post">
           <a class="post__link" href="https://blog.naver.com/silksun9012/224474798518"><span class="post__pic"><img src="https://mblogthumb-phinf.pstatic.net/MjAyNjExMTJfMTQ1/MDAxNzk0NDg0MTM0Mjgy.7lTGC5R3KL0ZbTY3O3SZyKIsXBUmqb04TUoVuhQGsTIg.B0-KWveU2fMb11WhdwFSc0B2y_Kfys4BjEf33WTX95cg.JPEG/900_20261109_184546.jpg?type=w400" alt="" width="400" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span class="post__title">다산 삼겹살 고기집, 통통 다산본점,  다산역 구워주는 숙성 목살 맛집 (콜키지 FREE)</span></a>
-          <p class="post__meta"><time datetime="2026-11-12T12:26:32.231Z">11월 12일</time><span>공감 1,021</span><span>댓글 32</span></p>
+          <p class="post__meta"><time datetime="2026-11-12T12:26:32.231Z">11월 12일</time><span>댓글 32</span></p>
         </li>
         <!-- posts:end -->
       </ol>
@@ -103,7 +127,7 @@
       <hr class="rule--double">
       <dl class="score">
         <div><dt>네이버 블로그 이웃</dt><dd><b class="num" data-live="blog.subscribers">8,732</b>명</dd></div>
-        <div><dt>누적 방문자</dt><dd><b class="num" data-live="blog.totalVisitors">560,909</b>명</dd></div>
+        <div><dt>누적 방문자</dt><dd><b class="num" data-live="blog.totalVisitors">560,931</b>명</dd></div>
         <div><dt>최근 하루 평균 방문자</dt><dd><b class="num" data-live="blog.avgVisitors">1,896</b>명</dd></div>
         <div><dt>지난주 인기글 10편 조회수</dt><dd><b class="num" data-live="blai.weeklyTopViews">13,726</b>회</dd></div>
       </dl>

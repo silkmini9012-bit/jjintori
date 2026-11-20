@@ -3,9 +3,12 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 
 export const num = (n) => (typeof n === 'number' ? n.toLocaleString('ko-KR') : '');
 
-export const kDate = (iso) => new Intl.DateTimeFormat('ko-KR', { month: 'long', day: 'numeric', timeZone: 'Asia/Seoul' }).format(new Date(iso));
+// 실행 환경(ICU)에 따라 'AM'처럼 찍히지 않도록 한국 시간으로 직접 만듭니다.
+const kst = (iso) => { const d = new Date(new Date(iso).getTime() + 9 * 3600e3); return { mo: d.getUTCMonth() + 1, da: d.getUTCDate(), h: d.getUTCHours(), mi: d.getUTCMinutes() }; };
 
-export const kStamp = (iso) => new Intl.DateTimeFormat('ko-KR', { month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Seoul' }).format(new Date(iso));
+export const kDate = (iso) => { const t = kst(iso); return `${t.mo}월 ${t.da}일`; };
+
+export const kStamp = (iso) => { const t = kst(iso); const h12 = t.h % 12 || 12; return `${t.mo}월 ${t.da}일 ${t.h < 12 ? '오전' : '오후'} ${h12}:${String(t.mi).padStart(2, '0')}`; };
 
 export const kDay = (ymd) => { const [y, m, d] = ymd.split('-').map(Number); return `${y}년 ${m}월 ${d}일`; };
 
@@ -26,7 +29,7 @@ export function postsHTML(posts = []) {
       : '';
     return `<li class="post${i === 0 ? ' post--lead' : ''}">
           <a class="post__link" href="${esc(p.url)}">${pic}<span class="post__title">${esc(p.title)}</span></a>
-          <p class="post__meta"><time datetime="${esc(p.date)}">${kDate(p.date)}</time><span>공감 ${num(p.likes)}</span><span>댓글 ${num(p.comments)}</span></p>
+          <p class="post__meta"><time datetime="${esc(p.date)}">${kDate(p.date)}</time><span>댓글 ${num(p.comments)}</span></p>
         </li>`;
   }).join('\n        ');
 }

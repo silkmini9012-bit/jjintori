@@ -30,6 +30,27 @@ async function refresh() {
   if (data) apply(data);
 }
 
+// 메인 사진 띠: 화면에 보일 때만 흐르고, 마우스를 올리거나 키보드로 고르면 멈춥니다.
+document.querySelectorAll('[data-loop]').forEach((el) => {
+  const btn = el.querySelector('[data-loop-toggle]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const s = { seen: false, hover: false, focus: false, held: false };
+  const sync = () => {
+    el.classList.toggle('is-running', s.seen && !s.hover && !s.focus && !s.held && !reduce.matches);
+    if (btn) {
+      btn.textContent = s.held ? '재생' : '멈춤';
+      btn.setAttribute('aria-label', s.held ? '사진 다시 움직이기' : '사진 움직임 멈추기');
+      btn.setAttribute('aria-pressed', String(s.held));
+    }
+  };
+  btn?.addEventListener('click', () => { s.held = !s.held; sync(); });
+  [['pointerenter', 'hover', true], ['pointerleave', 'hover', false], ['focusin', 'focus', true], ['focusout', 'focus', false]]
+    .forEach(([type, key, val]) => el.addEventListener(type, (e) => { if (e.target === btn && key === 'focus') return; s[key] = val; sync(); }));
+  new IntersectionObserver(([entry]) => { s.seen = entry.isIntersecting; sync(); }).observe(el);
+  reduce.addEventListener?.('change', sync);
+  sync();
+});
+
 refresh();
 setInterval(() => { if (document.visibilityState === 'visible') refresh(); }, REFRESH);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') refresh(); });
