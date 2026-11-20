@@ -1,9 +1,11 @@
 import { liveValue, postsHTML, keywordsHTML } from './render.mjs';
 
 const REFRESH = 10 * 60 * 1000;
+// GitHub Pages에는 server.mjs 가 없으니 /api 주소는 건너뜁니다.
+const HAS_SERVER = !location.hostname.endsWith('github.io');
 
 async function load() {
-  for (const url of ['/api/blog', 'data/blog.json']) {
+  for (const url of HAS_SERVER ? ['/api/blog', 'data/blog.json'] : ['data/blog.json']) {
     try {
       const res = await fetch(url, { cache: 'no-store' });
       if (res.ok) return await res.json();
@@ -74,7 +76,7 @@ if (form) {
 
     // 1순위: 이 사이트 서버(server.mjs)가 네이버 SMTP로 직접 보냅니다.
     //        서버가 없거나(GitHub Pages 등) SMTP 설정이 안 됐으면 Web3Forms로 보냅니다.
-    const direct = await fetch('/api/contact', {
+    const direct = !HAS_SERVER ? { status: 0, out: {} } : await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({ shop: field('shop').value, reach, offer: field('offer').value }),
